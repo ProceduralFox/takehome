@@ -1,0 +1,303 @@
+@import '../../global_styles/variables_mixins.scss';
+
+.bottom{
+    width: 1238px;
+    height: 903px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+}
+
+.bottom_left{
+    width: 527px;
+    height: 704px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.left_first{
+    >h1{
+        font-family: "Poppins";
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        color: black;
+
+        margin-bottom: 25px;
+        margin-top: 19px;
+
+    }
+
+    h2{
+        color: orange;
+
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.12em;
+        text-align: left;
+
+    }
+
+    >p{
+        width: 453px;
+
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+
+
+    }
+}
+
+.left_second{
+    position: relative;
+    overflow: hidden;
+
+    height: 392px;
+    width: 100%;
+}
+
+.elements{
+    z-index: inherit
+}
+
+.graph{
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 18px;
+}
+
+.bottom_right{
+    background: rgba(254, 239, 224, 1);
+    background-image: url("../../../public/kruhy.png");
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+
+    height: 800px;
+    width: 630px;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    >div{
+        height: 556px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    >button{
+        color: white;
+
+        width: 550px;
+        height: 55px;
+
+        @include button("Make your business goals a reality", 6px)
+
+    }
+}
+
+.benefit_card{
+    width: 550px;
+    height: 160px;
+    background-image: url("../../../public/Element.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 16px;
+
+    >h1{
+        font-family: "Open Sans";
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 68px;
+        letter-spacing: 0em;
+        text-align: center;
+
+        color: transparent;
+
+        background: linear-gradient(to right, orange, orangered);
+        
+        background-clip: text;
+
+        margin-left: 40px;
+
+    }
+
+    >div{
+        margin-right: 30px;
+        >h2{
+            font-family: "Poppins";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            color: black;
+        }
+
+        >p{
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+
+
+            color: grey;
+
+            width: 281px;
+
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1390px) {
+    .bottom{
+        flex-direction: column;
+        width: 100%;
+
+        height: fit-content;
+    }
+
+    .bottom_left{
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .bottom_right{
+        margin-bottom: 50px;
+        height: fit-content;
+
+        width: 100%;
+
+        >div{
+            height: fit-content;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        >button{
+            width: 90vw;
+            font-size: 4vw;
+
+            margin-bottom: 20px;
+        }
+    }
+
+    .benefit_card{
+        height: 500px;
+        width: 160px;
+
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+        background-image: url("../../../public/Element\ -\ Copy.png");
+        background-position: top;
+
+        flex-direction: column;
+        align-items: center;
+
+        >h1{
+            margin: 0;
+            margin-top: 40px;
+        }
+
+        >div{
+            width: 100%;
+            overflow: hidden;
+
+            margin: 0;
+
+            margin: auto;
+
+            >h2{
+                text-align: center;
+            }
+
+            >p{
+                text-align: center;
+                width: 100%;            
+        }
+        };
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) { 
+    .bottom{
+        justify-content: flex-start;
+    }
+
+    .left_second{
+        display: none;
+        visibility: hidden;
+    }
+    
+    .bottom_left{
+        width: 100vw;
+        height: fit-content;
+    }
+    
+    .left_first{
+        width: 90%;
+        margin: 0;
+    
+        >p{
+            text-align: center;
+            width: 100%;
+
+            font-size: 14px;
+        }
+
+        >h2{
+            text-align: center;
+        }
+
+        >h1{
+            text-align: center;
+        }
+    }
+
+
+}

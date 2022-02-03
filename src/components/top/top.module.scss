@@ -1,0 +1,489 @@
+@import '../../global_styles/variables_mixins.scss';
+
+.top{
+    background: transparent;
+
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-bottom: 162px;
+
+    &__left{
+        margin: auto;
+        width: 679px;
+        height: 471px;
+
+        >div:nth-child(1){
+            height: 307px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__right{
+        width: 896px;
+        height: 814px;
+
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+}
+
+.hero{
+    &_wrapper{
+        border-radius: 70px 0 0 70px;
+        overflow: hidden;
+
+        background-image: url('../../../public/hero.jpg');
+
+        background-size: cover;
+        background-repeat: none;
+
+        height:814px;
+        width: 85%;
+
+    }
+}
+
+.chat_bubbles{
+    position: absolute;
+
+    z-index: 3;
+
+    top: 185px;
+    left: 0;
+
+    width: 457px;
+    height: 362px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+
+    font-family: 'Lato', sans-serif;
+
+    font-weight: 400;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+
+    >div{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        >img{
+            margin-right: 14px;
+        }
+    }
+
+
+}
+
+.bubble{
+    &_agent{
+        background: $grey;
+        color: $black;
+        width: fit-content;
+        margin-right: auto;
+
+        padding: 10px;
+        padding-right: 35px;
+        
+        max-width: 309px;
+
+        border-radius: 24px 24px 24px 6px;
+    }
+
+    &_customer{
+        background: $orange_dark;
+        color: white;
+        width: fit-content;
+        margin-left: auto;
+
+        position: relative;
+
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 70px;
+        
+        width: 309px;
+
+        border-radius: 24px 24px 6px 24px;
+
+        &_small{
+            padding: 10px;
+            padding-left: 15px;
+            border-radius: 24px;
+        }
+
+
+        &::after{
+            content: "";
+            height: 23.13px;
+            width: 23.13px;
+            background: url('../../../public/Read.png');
+
+            position: absolute;
+
+            right: 25px;
+            bottom: 10px;
+        }
+    }
+}
+
+
+
+.title_main{
+    font-family: Poppins;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 67px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    >span {
+        color: transparent;
+        background: $gradient;
+
+        background-clip: text;
+    }
+
+}
+
+.title_secondary{
+    font-family: Poppins;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    width: 425px;
+
+}
+
+.title_tertiary{
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    position: relative;
+
+    margin-right: 10px;
+
+    color: #808080;
+}
+
+.title_features{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 425px;
+
+    >div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+}
+
+.pitch_buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    width: 660px;
+
+    width: fit-content;
+
+    >button{
+        width: 235px;
+        height: 53px;
+
+        @include button("Get Started  |  14 days free", 6px);
+
+    }
+
+
+    >img{
+        margin-left: 20px;
+        cursor: pointer;
+
+        transition: transform .2s ease-out;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    >h3{
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: center;
+
+        vertical-align: middle;
+
+        color: $black;
+
+        margin-left: 10px;
+
+        transition: all .2s ease-out;
+        cursor: pointer;
+
+        &:hover{
+            color: $orange_dark;
+        }
+
+    }
+
+}
+
+
+.pitch_logos{
+    display: flex;
+    justify-content: space-between;
+
+    width: 660px;
+
+    margin-top: 4px;
+
+
+    &_text{
+        font-family: 'Poppins';
+
+        color: gray;
+
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        margin-top: 23px;
+
+    }
+
+}
+
+
+@keyframes loading {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.typing{
+    font-weight: 700;
+    font-family: "Poppins";
+
+    color: $grey_text;
+
+    margin-right: auto;
+
+    >span{
+        display: inline-block;
+        animation: loading 1s ease-in-out infinite;
+    }
+
+
+    :nth-child(1){
+        animation-delay: 0.25s;
+    }   
+
+    :nth-child(2){
+        animation-delay: 0.5s;
+    }   
+
+    :nth-child(3){
+        animation-delay: 0.75s;
+    }   
+}
+
+@media only screen and (max-width: 1580px) { 
+    .pitch_logos{
+        width: 60%;
+
+        &_wrapper{
+            >div:nth-child(1){
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+
+    .top__right{
+        width: 47%;
+    }
+}
+
+
+@media only screen and (max-width: 1390px) {
+    .top{
+        overflow: hidden;
+    }
+
+    .hero_wrapper{
+        width: 100%;
+        background-position: center;
+    }
+
+    .top__left{
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    
+    .top__right{
+        display: none;
+        visibility: hidden;
+    }
+
+    .top__left{
+        margin: auto;
+        margin-top: 50px;
+        height: fit-content;
+    }
+
+    .pitch_logos{
+        width: 80%;
+    }
+ }
+
+@media only screen and (max-width: 700px) {
+    .top{
+        margin-bottom: 80px;
+    }
+    .top__left{
+        width: 100vw;
+        align-items: center;
+    }
+
+    .pitch_buttons{
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+
+        width: 100vw;
+
+        >button{
+            width: 45vw;
+            font-size: 3vw;
+        }
+
+        >h3{
+            font-size: 2.8vw;
+        }
+
+        >img{
+            width: 13vw;
+        }
+    }
+
+    .title{
+        margin-right: auto;
+        margin-left: auto;
+
+        &_main{
+            text-align: center;
+
+            font-size: 9vw;
+        }
+
+        
+        &_secondary{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+            font-size: 4vw;
+
+            width: fit-content;
+        }
+
+        &_features{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: fit-content;
+
+            
+           >*{
+               >*{
+                font-size: 3.3vw;
+               }
+           }
+
+        }
+
+    }
+
+    
+    .pitch_logos{
+        margin: auto;
+        width: 80%;
+
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 180px;
+
+        &_wrapper{
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        &_text{
+            width: 50%;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 20px;
+        }
+    }
+}

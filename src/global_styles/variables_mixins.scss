@@ -1,0 +1,64 @@
+$black: #050505;
+$grey: #F5F5F7;
+$grey_text: #65676B;
+$orange: #FFBD39;
+$orange_dark: #FA9531;
+
+$gradient: linear-gradient(to right, $orange, $orange_dark);
+
+
+
+
+@mixin button($content, $radius) {
+    background-image: $gradient;
+    background-size: 200%;
+    background-position: left;
+
+
+    color: white;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    position: relative;
+
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+
+    border-radius: $radius;
+    cursor: pointer;
+    border: none;
+
+    &:after{
+        position: absolute;
+        content: $content;
+
+        height: 100%;
+        width: 100%;
+
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: $radius;
+
+        background-image: linear-gradient(to right, $orange_dark, $orange);
+        opacity: 0;
+        
+        transition: opacity 0.3s ease-in;
+
+        z-index: 2;
+
+    }
+
+    &:hover::after{
+        opacity: 1;
+    }
+}
